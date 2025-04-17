@@ -64,24 +64,24 @@
       if (!apiKey) return alert("请填写 API 密钥");
 
       if (op === "profile") {
-        url = `https://www.khuongfb.com/api/profile.php?api_key=${apiKey}`;
+        url = `https://cors-anywhere.herokuapp.com/https://www.khuongfb.com/api/profile.php?api_key=${apiKey}`;
       } else if (op === "products") {
-        url = `https://www.khuongfb.com/api/products.php?api_key=${apiKey}`;
+        url = `https://cors-anywhere.herokuapp.com/https://www.khuongfb.com/api/products.php?api_key=${apiKey}`;
       } else if (op === "product") {
         const pid = document.getElementById("productId").value.trim();
         if (!pid) return alert("请输入产品ID");
-        url = `https://www.khuongfb.com/api/product.php?api_key=${apiKey}&product=${pid}`;
+        url = `https://cors-anywhere.herokuapp.com/https://www.khuongfb.com/api/product.php?api_key=${apiKey}&product=${pid}`;
       } else if (op === "order") {
         const oid = document.getElementById("orderId").value.trim();
         if (!oid) return alert("请输入订单号");
-        url = `https://www.khuongfb.com/api/order.php?api_key=${apiKey}&order=${oid}`;
+        url = `https://cors-anywhere.herokuapp.com/https://www.khuongfb.com/api/order.php?api_key=${apiKey}&order=${oid}`;
       } else if (op === "buy") {
         const id = document.getElementById("buyProductId").value.trim();
         const amount = document.getElementById("buyAmount").value.trim();
         const coupon = document.getElementById("buyCoupon").value.trim();
         if (!id || !amount) return alert("请输入产品ID和数量");
 
-        url = `https://www.khuongfb.com/api/buy_product`;
+        url = `https://cors-anywhere.herokuapp.com/https://www.khuongfb.com/api/buy_product`;
         options = {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
